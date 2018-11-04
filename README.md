@@ -31,7 +31,7 @@ Two files will be created under src/datasources as well as the necessary connect
 
 `lb4 datasource DCMetroProxy`
 
-You the CLI allows you to enter information about the REST web service. Let's set the base URL for the DC Metro at least when asked. The rest we can do manually within the datasouce file
+The CLI allows you to enter information about the REST web service. Let's set the base URL for the DC Metro at least when asked. The rest we can do manually within the datasouce file
 
 `https://api.wmata.com/`
 
