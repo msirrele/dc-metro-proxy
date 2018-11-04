@@ -246,10 +246,10 @@ Finally we can add the params decorator to help validate the data type of the pa
 ```javascript
   @get('/bus-incidents/{route}')
   async getBusIncidents(
-    @param.path.string('route') Route: string
+    @param.path.string('route') queriedRoute: string
   ): Promise<BusIncidentsResult> {
     return await this.dcMetroProxyService.getBusIncidents(<BusIncidentParameters>{
-      Route
+      queriedRoute
     });
   }
 
