@@ -1,0 +1,38 @@
+{
+  "name": "DCMetroProxy",
+  "connector": "rest",
+  "baseURL": "https://api.wmata.com/",
+  "options": {
+    "headers": {
+      "Accept": "application/json",
+      "Content-Type": "application/json",
+      "api_key": "add_your_api_key"
+    },
+    "strictSSL": false
+  },
+  "operations": [
+    {
+      "template": {
+        "method": "GET",
+        "url": "https://api.wmata.com/Incidents.svc/json/BusIncidents?Route={queriedRoute}"
+      },
+      "functions": {
+        "getBusIncidents": [
+          "queriedRoute"
+        ]
+      }
+    },
+    {
+      "template": {
+        "method": "GET",
+        "url": "https://api.wmata.com/TrainPositions/TrainPositions?contentType={contentType}"
+      },
+      "functions": {
+        "getLiveTrainPositions": [
+          "contentType"
+        ]
+      }
+    }
+  ],
+  "crud": false
+}
